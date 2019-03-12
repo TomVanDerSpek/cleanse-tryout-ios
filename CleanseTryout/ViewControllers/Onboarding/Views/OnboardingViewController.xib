@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OnboardingViewController" customModule="CleanseTryout" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i0H-cT-J2g" id="Wvb-kk-hoa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="i0H-cT-J2g">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R5z-Wn-3xg">
+                    <rect key="frame" x="142.5" y="293.5" width="90.5" height="100.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onboarding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg1-bL-TtM">
+                            <rect key="frame" x="0.0" y="0.0" width="90.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnk-1k-yfc" userLabel="Login">
+                            <rect key="frame" x="0.0" y="30.5" width="90.5" height="30"/>
+                            <state key="normal" title="Login"/>
+                            <connections>
+                                <action selector="showLogin" destination="-1" eventType="touchUpInside" id="UPz-QF-YMw"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS0-qZ-T5w" userLabel="Register">
+                            <rect key="frame" x="0.0" y="70.5" width="90.5" height="30"/>
+                            <state key="normal" title="Register"/>
+                            <connections>
+                                <action selector="showRegister" destination="-1" eventType="touchUpInside" id="uuK-b5-7Wg"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="R5z-Wn-3xg" firstAttribute="centerX" secondItem="jIr-B7-Ipq" secondAttribute="centerX" id="GDX-2K-9ad"/>
+                <constraint firstItem="R5z-Wn-3xg" firstAttribute="centerY" secondItem="jIr-B7-Ipq" secondAttribute="centerY" id="Lkr-pP-JEP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="jIr-B7-Ipq"/>
+            <point key="canvasLocation" x="-6" y="27"/>
+        </view>
+    </objects>
+</document>
