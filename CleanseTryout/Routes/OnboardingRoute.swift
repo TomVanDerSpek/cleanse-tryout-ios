@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
-protocol OnboardingRoute: AnyObject {
+protocol OnboardingRoute {
     
-    func routeOnboarding()
+    func showOnboarding(from viewController: UIViewController) 
     
 }

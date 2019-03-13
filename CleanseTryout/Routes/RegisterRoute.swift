@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
-protocol RegisterRoute: AnyObject {
+protocol RegisterRoute {
     
-    func routeRegister()
+    func showRegister(from viewController: UIViewController, with username: String)
     
 }

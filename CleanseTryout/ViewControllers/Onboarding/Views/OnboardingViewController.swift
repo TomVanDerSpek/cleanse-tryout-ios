@@ -19,21 +19,27 @@ protocol OnboardingDisplayLogic: AnyObject {
     func displayRegisterScreen()
 }
 
+struct OnboardingPresenterFactory {
+    func build(with loginDisplayLogic: OnboardingDisplayLogic) -> OnboardingPresenter {
+        return OnboardingPresenter(delegate: loginDisplayLogic)
+    }
+}
+
 final class OnboardingViewController: UIViewController {
-    typealias Coordinator = RegisterRoute & LoginRoute
-    typealias Interactor = OnboardingBusinessLogic & OnboardingDataStore
+    typealias Router = LoginRoute & RegisterRoute
+    typealias Interactor = InteractorProtocol & OnboardingBusinessLogic
+    typealias Presenter = PresenterProtocol & OnboardingPresentationLogic
     
-    private var coordinator: Coordinator?
-    private var interactor: Interactor
+    private let router: Router
+    private let interactor: Interactor
+    private var presenter: Presenter!
     
-    init(interactor: Interactor, coordinator: WeakProvider<Coordinator>) {
-        let coordinator = coordinator.get()
-        assert(coordinator != nil, "WeakProvider should not return nil!")
-        
+    init(router: TaggedProvider<OnboardingRouter>, interactor: Interactor, presenterFactory: OnboardingPresenterFactory) {
         self.interactor = interactor
-        self.coordinator = coordinator
+        self.router = router.get()
         super.init(nibName: nil, bundle: nil)
-        interactor.presenter.delegate = self
+        
+        self.presenter = presenterFactory.build(with: self)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -56,10 +62,10 @@ private extension OnboardingViewController {
 // MARK: - OnboardingDisplayLogic
 extension OnboardingViewController: OnboardingDisplayLogic {
     func displayLoginScreen() {
-        coordinator?.routeLogin()
+        router.showLogin(from: self)
     }
     
     func displayRegisterScreen() {
-        coordinator?.routeRegister()
+        router.showLogin(from: self)
     }
 }

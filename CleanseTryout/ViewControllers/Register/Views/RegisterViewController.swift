@@ -11,4 +11,5 @@ import UIKit
 
 final class RegisterViewController: UIViewController {
     
+    var prefillUsername: String?
 }

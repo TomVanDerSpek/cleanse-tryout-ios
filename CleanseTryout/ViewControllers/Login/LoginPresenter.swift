@@ -10,18 +10,20 @@ import UIKit
 import Cleanse
 
 protocol LoginPresentationLogic: AnyObject {
-    var delegate: LoginDisplayLogic? { get set }
-    
     func presentHotelOverview()
     func presentLoginError(response: Login.InvalidUserLogin.Response)
 }
 
-final class LoginPresenter {
-    weak var delegate: LoginDisplayLogic?
+final class LoginPresenter: LoginViewController.Presenter {
+    private weak var delegate: LoginDisplayLogic?
+    
+    init(delegate: LoginDisplayLogic) {
+        self.delegate = delegate
+    }
 }
 
 // MARK: - LoginPresentationLogic
-extension LoginPresenter: LoginPresentationLogic {
+extension LoginPresenter {
     
     func presentHotelOverview() {
         delegate?.displayHotelOverview()

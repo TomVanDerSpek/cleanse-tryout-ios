@@ -17,21 +17,25 @@ protocol OnboardingDataStore {
     var presenter: OnboardingPresentationLogic { get }
 }
 
-final class OnboardingInteractor: OnboardingDataStore {
-    private(set) var presenter: OnboardingPresentationLogic
+final class OnboardingInteractor: OnboardingViewController.Interactor {
+    private weak var presenter: OnboardingViewController.Presenter?
     
-    init(presenter: OnboardingPresenter) {
-        self.presenter = presenter
+    func attach(_ presenter: PresenterProtocol) {
+        self.presenter = presenter as? OnboardingViewController.Presenter
+    }
+    
+    func detachPresenter() {
+        self.presenter = nil
     }
 }
 
 // MARK: - OnboardingBusinessLogic
-extension OnboardingInteractor: OnboardingBusinessLogic {
+extension OnboardingInteractor {
     func showLogin() {
-        presenter.presentLoginScreen()
+        presenter?.presentLoginScreen()
     }
     
     func showRegister() {
-        presenter.presentRegisterScreen()
+        presenter?.presentRegisterScreen()
     }
 }

@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
-protocol LoginRoute: AnyObject {
+protocol LoginRoute {
     
-    func routeLogin()
+    func showLogin(from viewController: UIViewController)
     
 }

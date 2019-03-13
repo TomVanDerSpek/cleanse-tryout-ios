@@ -15,15 +15,12 @@
 		1D4D25622238199E00AF6E3C /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D25612238199E00AF6E3C /* Modules.swift */; };
 		1D4D2564223819A500AF6E3C /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D2563223819A500AF6E3C /* AppModule.swift */; };
 		1D4D2566223819AD00AF6E3C /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D2565223819AD00AF6E3C /* AppComponent.swift */; };
-		1D4D256A22381AB000AF6E3C /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D256922381AB000AF6E3C /* CoordinatorProtocol.swift */; };
-		1D4D256C22381AFD00AF6E3C /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D256B22381AFD00AF6E3C /* ApplicationCoordinator.swift */; };
 		1D4D256F22381B1D00AF6E3C /* LoginRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D256E22381B1D00AF6E3C /* LoginRoute.swift */; };
 		1D4D257122381B2700AF6E3C /* OnboardingRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D257022381B2700AF6E3C /* OnboardingRoute.swift */; };
 		1D4D257322381B4F00AF6E3C /* RegisterRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D257222381B4F00AF6E3C /* RegisterRoute.swift */; };
 		1D4D258922381C0300AF6E3C /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D257922381C0300AF6E3C /* OnboardingViewController.xib */; };
 		1D4D258A22381C0300AF6E3C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D257A22381C0300AF6E3C /* OnboardingViewController.swift */; };
 		1D4D258B22381C0300AF6E3C /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D257C22381C0300AF6E3C /* LoginInteractor.swift */; };
-		1D4D258C22381C0300AF6E3C /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D257D22381C0300AF6E3C /* LoginModels.swift */; };
 		1D4D258D22381C0300AF6E3C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D4D257F22381C0300AF6E3C /* LoginViewController.xib */; };
 		1D4D258E22381C0300AF6E3C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D258022381C0300AF6E3C /* LoginViewController.swift */; };
 		1D4D258F22381C0300AF6E3C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D258122381C0300AF6E3C /* LoginPresenter.swift */; };
@@ -33,6 +30,11 @@
 		1D4D259722381E5200AF6E3C /* AppScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D259622381E5200AF6E3C /* AppScope.swift */; };
 		1D4D259A223824D400AF6E3C /* OnboardingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D2598223824D400AF6E3C /* OnboardingInteractor.swift */; };
 		1D4D259B223824D400AF6E3C /* OnboardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D2599223824D400AF6E3C /* OnboardingPresenter.swift */; };
+		1D4D259E223955FE00AF6E3C /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D259D223955FE00AF6E3C /* LoginRouter.swift */; };
+		1D4D25A2223986C900AF6E3C /* InteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D25A1223986C900AF6E3C /* InteractorProtocol.swift */; };
+		1D4D25A4223986E200AF6E3C /* PresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D25A3223986E200AF6E3C /* PresenterProtocol.swift */; };
+		1DD2D29F2239908100ACD492 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2D29E2239908100ACD492 /* OnboardingRouter.swift */; };
+		1DD2D2A1223998A300ACD492 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD2D2A0223998A300ACD492 /* LoginModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,15 +48,12 @@
 		1D4D25612238199E00AF6E3C /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
 		1D4D2563223819A500AF6E3C /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
 		1D4D2565223819AD00AF6E3C /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
-		1D4D256922381AB000AF6E3C /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
-		1D4D256B22381AFD00AF6E3C /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		1D4D256E22381B1D00AF6E3C /* LoginRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRoute.swift; sourceTree = "<group>"; };
 		1D4D257022381B2700AF6E3C /* OnboardingRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRoute.swift; sourceTree = "<group>"; };
 		1D4D257222381B4F00AF6E3C /* RegisterRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRoute.swift; sourceTree = "<group>"; };
 		1D4D257922381C0300AF6E3C /* OnboardingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
 		1D4D257A22381C0300AF6E3C /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		1D4D257C22381C0300AF6E3C /* LoginInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
-		1D4D257D22381C0300AF6E3C /* LoginModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		1D4D257F22381C0300AF6E3C /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		1D4D258022381C0300AF6E3C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1D4D258122381C0300AF6E3C /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -64,6 +63,11 @@
 		1D4D259622381E5200AF6E3C /* AppScope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScope.swift; sourceTree = "<group>"; };
 		1D4D2598223824D400AF6E3C /* OnboardingInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingInteractor.swift; sourceTree = "<group>"; };
 		1D4D2599223824D400AF6E3C /* OnboardingPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPresenter.swift; sourceTree = "<group>"; };
+		1D4D259D223955FE00AF6E3C /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		1D4D25A1223986C900AF6E3C /* InteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorProtocol.swift; sourceTree = "<group>"; };
+		1D4D25A3223986E200AF6E3C /* PresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterProtocol.swift; sourceTree = "<group>"; };
+		1DD2D29E2239908100ACD492 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
+		1DD2D2A0223998A300ACD492 /* LoginModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		2BA834BA9585022B2BCD4101 /* Pods-CleanseTryout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanseTryout.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanseTryout/Pods-CleanseTryout.release.xcconfig"; sourceTree = "<group>"; };
 		EB6B6F29895A197A4AB81210 /* Pods-CleanseTryout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanseTryout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanseTryout/Pods-CleanseTryout.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,10 +105,10 @@
 		1D4D254D223818F900AF6E3C /* CleanseTryout */ = {
 			isa = PBXGroup;
 			children = (
+				1D4D259F223986A100AF6E3C /* Application */,
 				1D4D259422381E3900AF6E3C /* Scopes */,
 				1D4D257422381B8200AF6E3C /* ViewControllers */,
-				1D4D256822381A1E00AF6E3C /* Coordinators */,
-				1D4D2567223819FC00AF6E3C /* AppDelegate */,
+				1D4D256822381A1E00AF6E3C /* Routes */,
 				1D4D25602238199400AF6E3C /* Modules */,
 				1D4D2552223818F900AF6E3C /* Main.storyboard */,
 				1D4D2555223818F900AF6E3C /* Assets.xcassets */,
@@ -124,25 +128,7 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		1D4D2567223819FC00AF6E3C /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				1D4D254E223818F900AF6E3C /* AppDelegate.swift */,
-			);
-			path = AppDelegate;
-			sourceTree = "<group>";
-		};
-		1D4D256822381A1E00AF6E3C /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				1D4D256D22381B1700AF6E3C /* Routes */,
-				1D4D256922381AB000AF6E3C /* CoordinatorProtocol.swift */,
-				1D4D256B22381AFD00AF6E3C /* ApplicationCoordinator.swift */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		1D4D256D22381B1700AF6E3C /* Routes */ = {
+		1D4D256822381A1E00AF6E3C /* Routes */ = {
 			isa = PBXGroup;
 			children = (
 				1D4D256E22381B1D00AF6E3C /* LoginRoute.swift */,
@@ -168,6 +154,7 @@
 			children = (
 				1D4D2598223824D400AF6E3C /* OnboardingInteractor.swift */,
 				1D4D2599223824D400AF6E3C /* OnboardingPresenter.swift */,
+				1DD2D29E2239908100ACD492 /* OnboardingRouter.swift */,
 				1D4D257822381C0300AF6E3C /* Views */,
 			);
 			path = Onboarding;
@@ -176,8 +163,8 @@
 		1D4D257822381C0300AF6E3C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D4D257922381C0300AF6E3C /* OnboardingViewController.xib */,
 				1D4D257A22381C0300AF6E3C /* OnboardingViewController.swift */,
+				1D4D257922381C0300AF6E3C /* OnboardingViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,9 +172,10 @@
 		1D4D257B22381C0300AF6E3C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1DD2D2A0223998A300ACD492 /* LoginModels.swift */,
 				1D4D257C22381C0300AF6E3C /* LoginInteractor.swift */,
-				1D4D257D22381C0300AF6E3C /* LoginModels.swift */,
 				1D4D258122381C0300AF6E3C /* LoginPresenter.swift */,
+				1D4D259D223955FE00AF6E3C /* LoginRouter.swift */,
 				1D4D257E22381C0300AF6E3C /* Views */,
 			);
 			path = Login;
@@ -196,8 +184,8 @@
 		1D4D257E22381C0300AF6E3C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D4D257F22381C0300AF6E3C /* LoginViewController.xib */,
 				1D4D258022381C0300AF6E3C /* LoginViewController.swift */,
+				1D4D257F22381C0300AF6E3C /* LoginViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,8 +201,8 @@
 		1D4D258422381C0300AF6E3C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D4D258522381C0300AF6E3C /* RegisterViewController.xib */,
 				1D4D258622381C0300AF6E3C /* RegisterViewController.swift */,
+				1D4D258522381C0300AF6E3C /* RegisterViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +221,24 @@
 				1D4D259622381E5200AF6E3C /* AppScope.swift */,
 			);
 			path = Scopes;
+			sourceTree = "<group>";
+		};
+		1D4D259F223986A100AF6E3C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1D4D25A0223986B900AF6E3C /* Protocols */,
+				1D4D254E223818F900AF6E3C /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1D4D25A0223986B900AF6E3C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1D4D25A1223986C900AF6E3C /* InteractorProtocol.swift */,
+				1D4D25A3223986E200AF6E3C /* PresenterProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		C52A6343D4B54FD02093AD08 /* Frameworks */ = {
@@ -379,10 +385,13 @@
 				1D4D2566223819AD00AF6E3C /* AppComponent.swift in Sources */,
 				1D4D259322381C0300AF6E3C /* RootViewController.swift in Sources */,
 				1D4D257122381B2700AF6E3C /* OnboardingRoute.swift in Sources */,
-				1D4D256A22381AB000AF6E3C /* CoordinatorProtocol.swift in Sources */,
+				1D4D25A2223986C900AF6E3C /* InteractorProtocol.swift in Sources */,
 				1D4D259A223824D400AF6E3C /* OnboardingInteractor.swift in Sources */,
 				1D4D257322381B4F00AF6E3C /* RegisterRoute.swift in Sources */,
 				1D4D256F22381B1D00AF6E3C /* LoginRoute.swift in Sources */,
+				1DD2D2A1223998A300ACD492 /* LoginModels.swift in Sources */,
+				1D4D25A4223986E200AF6E3C /* PresenterProtocol.swift in Sources */,
+				1DD2D29F2239908100ACD492 /* OnboardingRouter.swift in Sources */,
 				1D4D2564223819A500AF6E3C /* AppModule.swift in Sources */,
 				1D4D25622238199E00AF6E3C /* Modules.swift in Sources */,
 				1D4D258F22381C0300AF6E3C /* LoginPresenter.swift in Sources */,
@@ -390,9 +399,8 @@
 				1D4D259722381E5200AF6E3C /* AppScope.swift in Sources */,
 				1D4D254F223818F900AF6E3C /* AppDelegate.swift in Sources */,
 				1D4D259222381C0300AF6E3C /* RegisterViewController.swift in Sources */,
-				1D4D258C22381C0300AF6E3C /* LoginModels.swift in Sources */,
 				1D4D258A22381C0300AF6E3C /* OnboardingViewController.swift in Sources */,
-				1D4D256C22381AFD00AF6E3C /* ApplicationCoordinator.swift in Sources */,
+				1D4D259E223955FE00AF6E3C /* LoginRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

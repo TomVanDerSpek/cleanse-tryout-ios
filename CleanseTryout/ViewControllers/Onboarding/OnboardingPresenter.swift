@@ -9,18 +9,20 @@
 import UIKit
 
 protocol OnboardingPresentationLogic: AnyObject {
-    var delegate: OnboardingDisplayLogic? { get set }
-    
     func presentLoginScreen()
     func presentRegisterScreen()
 }
 
-final class OnboardingPresenter {
-    weak var delegate: OnboardingDisplayLogic?
+final class OnboardingPresenter: OnboardingViewController.Presenter {
+    private weak var delegate: OnboardingDisplayLogic?
+    
+    init(delegate: OnboardingDisplayLogic) {
+        self.delegate = delegate
+    }
 }
 
 // MARK: - OnboardingPresentationLogic
-extension OnboardingPresenter: OnboardingPresentationLogic {
+extension OnboardingPresenter {
     
     func presentLoginScreen() {
         delegate?.displayLoginScreen()

@@ -14,25 +14,52 @@ protocol LoginDisplayLogic: AnyObject {
     func displayLoginError(viewModel: Login.InvalidUserLogin.ViewModel)
 }
 
+struct ColorConverter { }
+
+protocol TestLoginPresetionLogic {
+    init(loginDisplayLogic: LoginDisplayLogic, colorConverter: ColorConverter)
+}
+
+
+
+
+struct LoginPresenterFactory {
+    func build(with loginDisplayLogic: LoginDisplayLogic) -> LoginPresenter {
+        return LoginPresenter(delegate: loginDisplayLogic)
+    }
+}
+
+
+
 final class LoginViewController: UIViewController {
-    typealias Coordinator = OnboardingRoute
-    typealias Interactor = LoginBusinessLogic & LoginDataStore
+    typealias Router = OnboardingRoute & RegisterRoute
+    typealias Interactor = InteractorProtocol & LoginBusinessLogic
+    typealias Presenter = PresenterProtocol & LoginPresentationLogic
     
-    private var coordinator: Coordinator?
-    private var interactor: Interactor
+    private let router: Router
+    private let interactor: Interactor
+    private var presenter: Presenter!
     
     @IBOutlet weak private var usernameTextField: UITextField!
     @IBOutlet weak private var passwordTextField: UITextField!
     @IBOutlet weak private var errorMessageLabel: UILabel!
     
-    init(interactor: Interactor, coordinator: WeakProvider<Coordinator>) {
-        let coordinator = coordinator.get()
-        assert(coordinator != nil, "WeakProvider should not return nil!")
-        
+    init(router: TaggedProvider<LoginRouter>, interactor: Interactor, presenterFactory: LoginPresenterFactory) {
         self.interactor = interactor
-        self.coordinator = coordinator
+        self.router = router.get()
         super.init(nibName: nil, bundle: nil)
-        interactor.presenter.delegate = self
+        
+        self.presenter = presenterFactory.build(with: self)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        interactor.attach(presenter)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        interactor.detachPresenter()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -44,7 +71,7 @@ final class LoginViewController: UIViewController {
 // MARK: - LoginDisplayLogic
 extension LoginViewController: LoginDisplayLogic {
     func displayHotelOverview() {
-        coordinator?.routeOnboarding()
+        router.showOnboarding(from: self)
     }
     
     func displayLoginError(viewModel: Login.InvalidUserLogin.ViewModel) {
